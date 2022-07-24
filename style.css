@@ -16,7 +16,7 @@ main {
 }
 .top_section {
   width: 1321px;
-  height: 646px;
+  height: auto;
 }
 
 a {
@@ -32,6 +32,8 @@ a {
   color: white;
   padding-left: 105px;
   padding-right: 80px;
+  width: auto;
+  height: auto;
 }
 .top_p {
   margin-top: 20px;
@@ -165,7 +167,7 @@ h1 {
 /* LAST SECTION STYLES */
 .last_section {
   width: auto;
-  height: 444px;
+  height: auto;
   background-color: black;
   color: white;
 }
@@ -216,16 +218,95 @@ hr {
 
 /* MEDIA QUERY MIDIUM DEVICE */
 @media only screen and (min-width: 769px) and (max-width: 991px) {
-
   .top_section {
     width: 100%;
   }
-  .container{
+  .container {
     width: 100%;
   }
   .middle_section {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 400px;
+  }
+  .middle_left {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: auto;
+  }
+  .middle_left_info {
+    width: 230px;
+    border: 1px solid black;
+    margin-left: 20px;
+  }
+  .middle_right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    width: auto;
+  }
+}
+
+/* MEDIA QUERY- SMALL DEVICE */
+@media only screen and (max-width: 768px) {
+  .View_all {
+    visibility: collapse;
+  }
+  .top_section {
+    width: auto;
+    height: auto;
+  }
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .banner p {
+    text-align: center;
+  }
+  .banner_left {
+    display: flex;
+    float: left;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner_left h1 {
+    text-align: center;
+    font-size: 50px;
+  }
+  .banner_right {
+    margin-top: 100px;
+  }
+  .banner_right img {
+    width: auto;
+  }
+  .middle_left {
+    margin-bottom: 50px;
+  }
+  .middle_section,
+  .middle_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .middle_section {
+    margin-bottom: 1300px;
+  }
+  footer,
+  .footer_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer_text a {
+    margin-top: 10px;
   }
 }
